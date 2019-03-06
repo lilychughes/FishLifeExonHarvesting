@@ -8,7 +8,7 @@ from sys import argv
 
 parser = argparse.ArgumentParser(description="Requires python 2.7 and biopython. Splits a multifasta file into single fasta file.")
 parser.add_argument('-f', '--fasta' , dest = 'fasta' , type = str , default= None , required= True, help = 'Multifasta to process')
-parser.add_argument('-c', '--clean' , dest = 'clean' , type = str , default= 'True' , required= True, help = 'If true, leaves only the taxon name')
+parser.add_argument('-c', '--clean' , dest = 'clean' , type = str , default= 'True' , required= False, help = 'If true, leaves only the taxon name')
 parser.add_argument('-s', '--separator' , dest = 'separator' , type = str , default= '|' , required= False, help = 'Character that separates the taxon name and the gene name.')
 args, unknown = parser.parse_known_args()
 
