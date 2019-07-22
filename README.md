@@ -13,7 +13,11 @@ nhmmer
 
 You will need fasta-formatted alignments of the exons you want to mine for some set of taxa, and fasta files of the genomes & transcriptomes you want to mine. If you want to download the coding sequences only of the genome you want to mine, it will probably run faster, but this will also work with unannotated genomic scaffolds.
 
-You need three directories, all side-by-side. The first is this github repository. The second is a directory called hmm. The third is a directory for all your genomes and transcriptomes. Call this whatever you like, as long as it is meaningful to you. Below I will refer to this as the 'Project' directory.
+You need three directories, all side-by-side. 
+-The first is this github repository. 
+-The second is a directory called hmm. You will put all the fasta-formatted alignments of exons you want to search for in this directory. They should end in .fasta 
+
+-The third is a directory for all your genomes and transcriptomes. Call this whatever you like, as long as it is meaningful to you. Below I will refer to this as the 'Project' directory.
 
 ```
 mkdir hmm
@@ -35,4 +39,17 @@ mkdir ${f%.*};
 mv $f ${f%.*}/;
 done
 ```
+
+# Step 1: Make HMMs for each locus
+
+*You will need hmmer in your path*
+
+The hmmbuild.sh script will make a .hmm file for every .fasta file in this folder. 
+
+```
+cd hmm/
+../FishLifeExonHarvesting/hmmbuild.sh
+cd ../
+```
+
 
