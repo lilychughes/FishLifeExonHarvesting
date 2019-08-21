@@ -5,7 +5,9 @@ Scripts for mining exons from genomes or transcriptomes. See Hughes et al. (2018
 ## This pipeline is meant to mine exon markers from genomes and transcriptomes using nhmmer.
 
 ### Software required:
+
 biopython
+
 nhmmer
 
 
@@ -52,4 +54,11 @@ cd hmm/
 cd ../
 ```
 
+# Step 2: Execute searches
+
+*You will need hmmer & biopython in your path*
+
+```
+../FishLifeExonHarvesting/nhmmer-search.sh
+```
 
