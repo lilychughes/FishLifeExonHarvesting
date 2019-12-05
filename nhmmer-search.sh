@@ -14,7 +14,7 @@ cd $directory;
 cp ../hmm/*.hmm .
 for hmm in *hmm;
 do
-nhmmer --tblout $hmm-hits.txt --noali -T 100 -cpu 2 --dna $hmm $directory.fasta;
+nhmmer --tblout $hmm-hits.txt --noali -T 100 --cpu 2 --dna $hmm $directory.fasta;
 done;
 rm *.hmm;
 cat *-hits.txt > $directory-hits.txt;
