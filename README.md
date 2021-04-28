@@ -58,6 +58,8 @@ cd ../
 
 *You will need hmmer & biopython in your path*
 
+Move to the project directory you created in Step 0.
+
 ```
 ../FishLifeExonHarvesting/nhmmer-search.sh
 ```
